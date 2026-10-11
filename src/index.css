@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #1C1917;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Accessibility Modes (demonstrated dynamically via toolbar) */
+.a11y-high-contrast {
+  --tw-contrast: 125%;
+  filter: contrast(115%);
+}
+
+.a11y-large-text {
+  font-size: 1.125rem;
+}
+
+.a11y-large-text h1 {
+  font-size: 3.25rem;
+}
+
+.a11y-large-text h2 {
+  font-size: 2.25rem;
+}
+
+.a11y-dyslexic {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.8 !important;
+}
+
+/* Focus styles conformes WCAG AA/AAA */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C26738;
+  outline-offset: 3px;
+}
