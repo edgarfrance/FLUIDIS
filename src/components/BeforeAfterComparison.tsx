@@ -102,7 +102,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                 <span className="w-2.5 h-2.5 rounded-full bg-stone-400 shrink-0"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-stone-400 shrink-0"></span>
                 <span className="ml-2 font-sans font-medium text-xs truncate">
-                  {activeTab === 'before' ? 'mon-restaurant-actuel.fr (Version vieillissante)' : 'bistrot-charlot.fr (Refonte Clarté et Sobriété)'}
+                  {activeTab === 'before' ? 'mon-restaurant-actuel.fr (Version vieillissante)' : 'bistrot-charlot.fr (Refonte Amblia Web)'}
                 </span>
               </div>
               <div className="flex items-center gap-2 font-sans text-xs shrink-0">

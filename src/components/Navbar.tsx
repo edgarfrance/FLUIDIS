@@ -46,14 +46,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
         {/* Brand identity */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif text-xl font-bold tracking-tight shadow-sm border border-stone-800">
-            C
+            A
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-xl font-bold text-stone-900 tracking-tight group-hover:text-stone-800 transition-colors">
-              CLARTÉ <span className="font-light italic text-stone-600">ET</span> ACCESSIBILITÉ
+              AMBLIA <span className="font-light italic text-stone-600">WEB</span>
             </span>
             <span className="text-[11px] uppercase tracking-wider text-stone-500 font-medium">
-              Refonte Web pour PME et Commerces
+              Refonte Web et Accessibilité pour PME
             </span>
           </div>
         </a>

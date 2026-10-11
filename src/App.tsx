@@ -12,11 +12,13 @@ import { FAQ } from './components/FAQ';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 import { AccessibilityToolbar } from './components/AccessibilityToolbar';
+import { LegalModals, LegalModalType } from './components/LegalModals';
 import { ActivitySector } from './types';
 
 export default function App() {
   const [selectedPlan, setSelectedPlan] = useState<string | undefined>(undefined);
   const [prefilledAnswers, setPrefilledAnswers] = useState<any>(undefined);
+  const [activeLegalModal, setActiveLegalModal] = useState<LegalModalType>(null);
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
@@ -100,11 +102,17 @@ export default function App() {
         />
       </main>
 
-      {/* Footer sobre et élégant */}
-      <Footer />
+      {/* Footer sobre et élégant avec déclencheurs légaux */}
+      <Footer onOpenLegal={(type) => setActiveLegalModal(type)} />
 
       {/* Barre d'accessibilité flottante en temps réel */}
       <AccessibilityToolbar />
+
+      {/* Modales Légales : Mentions, Confidentialité, Accessibilité */}
+      <LegalModals 
+        activeModal={activeLegalModal} 
+        onClose={() => setActiveLegalModal(null)} 
+      />
     </div>
   );
 }

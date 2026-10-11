@@ -1,7 +1,12 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ShieldCheck, ArrowUp } from 'lucide-react';
+import { LegalModalType } from './LegalModals';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal?: (type: 'mentions' | 'privacy' | 'accessibility') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -17,10 +22,10 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif text-xl font-bold border border-stone-700">
-                C
+                A
               </div>
               <span className="font-serif text-xl font-bold text-white tracking-tight">
-                CLARTÉ ET ACCESSIBILITÉ
+                AMBLIA WEB
               </span>
             </div>
             
@@ -64,7 +69,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href="mailto:contact@clarte-accessibilite.fr" className="hover:text-white transition-colors">contact@clarte-accessibilite.fr</a>
+                <a href="mailto:contact@ambliaweb.com" className="hover:text-white transition-colors">contact@ambliaweb.com</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
@@ -79,16 +84,31 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom bar */}
+        {/* Bottom bar with interactive legal modals */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-          <div className="flex flex-wrap items-center gap-4">
-            <span>© {new Date().getFullYear()} Clarté et Accessibilité. Tous droits réservés.</span>
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <span>© {new Date().getFullYear()} Amblia Web · EI EDGAR DUPRAT. Tous droits réservés.</span>
             <span>·</span>
-            <span className="hover:text-stone-400">Mentions Légales</span>
+            <button
+              onClick={() => onOpenLegal?.('mentions')}
+              className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
+            >
+              Mentions Légales
+            </button>
             <span>·</span>
-            <span className="hover:text-stone-400">Politique de Confidentialité</span>
+            <button
+              onClick={() => onOpenLegal?.('privacy')}
+              className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
+            >
+              Politique de Confidentialité
+            </button>
             <span>·</span>
-            <span className="hover:text-stone-400">Déclaration d'Accessibilité (WCAG 2.2 AA)</span>
+            <button
+              onClick={() => onOpenLegal?.('accessibility')}
+              className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
+            >
+              Déclaration d'Accessibilité (WCAG 2.2 AA)
+            </button>
           </div>
 
           <button
