@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, ArrowRight, Sun, Sparkles, CheckCircle, AlertCircle } from 'lucide-react';
+import { Check, X, ArrowRight, Sun, Sparkles, CheckCircle, AlertCircle, Eye } from 'lucide-react';
 
 interface BeforeAfterComparisonProps {
   onOpenAudit: () => void;
@@ -14,7 +14,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-200 text-amber-900 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
             <span>Démonstration Visuelle et Concrète</span>
@@ -30,55 +30,61 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
           </p>
         </div>
 
-        {/* Interactive Controls Bar without overlapping label */}
-        <div className="max-w-2xl mx-auto mb-10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-2.5 rounded-2xl shadow-sm border border-stone-200">
-          
-          {/* Main State Switcher */}
-          <div className="flex w-full sm:w-auto p-1 bg-stone-100 rounded-xl">
-            <button
-              onClick={() => setActiveTab('before')}
-              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                activeTab === 'before'
-                  ? 'bg-white text-rose-800 shadow-sm'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              Site actuel (Non optimisé)
-            </button>
-            <button
-              onClick={() => setActiveTab('after')}
-              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                activeTab === 'after'
-                  ? 'bg-stone-900 text-amber-400 shadow-sm'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-            >
-              Site refondu (Accessible et Épuré)
-            </button>
-          </div>
+        {/* Level 1: Primary Tab Switcher (Spacious, impossible to overlap) */}
+        <div className="max-w-xl mx-auto mb-4 p-1.5 bg-stone-200/80 rounded-2xl flex items-center shadow-inner">
+          <button
+            type="button"
+            onClick={() => setActiveTab('before')}
+            className={`flex-1 py-3 px-3 sm:px-5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center cursor-pointer ${
+              activeTab === 'before'
+                ? 'bg-white text-rose-800 shadow-md ring-1 ring-stone-900/5'
+                : 'text-stone-600 hover:text-stone-950'
+            }`}
+          >
+            Site actuel (Non optimisé)
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('after')}
+            className={`flex-1 py-3 px-3 sm:px-5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center cursor-pointer ${
+              activeTab === 'after'
+                ? 'bg-stone-900 text-amber-400 shadow-md ring-1 ring-stone-900/5'
+                : 'text-stone-600 hover:text-stone-950'
+            }`}
+          >
+            Site refondu (Accessible et épuré)
+          </button>
+        </div>
 
-          {/* Environmental simulation filter buttons */}
-          <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+        {/* Level 2: Discrete Environment Simulation (Centered, separated row) */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10 text-xs">
+          <span className="text-stone-500 font-medium">Conditions de lecture :</span>
+          <div className="inline-flex p-1 bg-white border border-stone-200 rounded-xl shadow-xs">
             <button
+              type="button"
               onClick={() => setSimulationMode('normal')}
-              className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
-                simulationMode === 'normal' ? 'bg-stone-200 text-stone-900 font-semibold' : 'hover:bg-stone-100 text-stone-600'
+              className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                simulationMode === 'normal'
+                  ? 'bg-stone-900 text-white shadow-xs'
+                  : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              Vue standard
+              <Eye className="w-3.5 h-3.5" />
+              <span>Vue standard</span>
             </button>
             <button
+              type="button"
               onClick={() => setSimulationMode('sun')}
-              className={`px-3 py-2 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
-                simulationMode === 'sun' ? 'bg-amber-100 text-amber-900 font-semibold border border-amber-300' : 'hover:bg-stone-100 text-stone-600'
+              className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                simulationMode === 'sun'
+                  ? 'bg-amber-500 text-stone-950 font-bold shadow-xs'
+                  : 'text-stone-600 hover:text-stone-900'
               }`}
-              title="Simule la perte de lisibilité sous la lumière du soleil"
             >
-              <Sun className="w-3.5 h-3.5 text-amber-600" />
+              <Sun className={`w-3.5 h-3.5 ${simulationMode === 'sun' ? 'text-stone-950' : 'text-amber-600'}`} />
               <span>Simuler le plein soleil</span>
             </button>
           </div>
-
         </div>
 
         {/* Visual Mockup Display */}
@@ -88,25 +94,25 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
           }`}>
             
             {/* Top Browser Bar */}
-            <div className={`px-5 py-3 flex items-center justify-between text-xs font-mono ${
+            <div className={`px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono ${
               activeTab === 'before' ? 'bg-stone-200 text-stone-700' : 'bg-stone-900 text-stone-300'
             }`}>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
-                <span className="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
-                <span className="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
-                <span className="ml-2 font-sans font-medium text-xs">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="w-2.5 h-2.5 rounded-full bg-stone-400 shrink-0"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-stone-400 shrink-0"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-stone-400 shrink-0"></span>
+                <span className="ml-2 font-sans font-medium text-xs truncate">
                   {activeTab === 'before' ? 'mon-restaurant-actuel.fr (Version vieillissante)' : 'bistrot-charlot.fr (Refonte Clarté et Sobriété)'}
                 </span>
               </div>
-              <div className="flex items-center gap-2 font-sans text-xs">
+              <div className="flex items-center gap-2 font-sans text-xs shrink-0">
                 {activeTab === 'before' ? (
                   <span className="text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-full font-semibold flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3" /> Score a11y: 38/100
+                    <AlertCircle className="w-3.5 h-3.5" /> Score a11y: 38/100
                   </span>
                 ) : (
                   <span className="text-emerald-400 bg-emerald-950 px-2.5 py-0.5 rounded-full font-semibold flex items-center gap-1">
-                    <CheckCircle className="w-3 h-3" /> Score a11y: 99/100 (WCAG AAA)
+                    <CheckCircle className="w-3.5 h-3.5" /> Score a11y: 99/100 (WCAG AAA)
                   </span>
                 )}
               </div>
@@ -141,19 +147,19 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                       Nous vous accueillons du mardi au samedi midi et soir. Découvrez nos plats faits maison avec des produits frais du terroir français.
                     </p>
 
-                    <div className="flex items-center gap-3 pt-3">
-                      <button className="px-3 py-1 bg-stone-300 text-white text-[11px] rounded cursor-not-allowed">
+                    <div className="flex flex-wrap items-center gap-3 pt-3">
+                      <button className="px-3 py-1.5 bg-stone-300 text-white text-[11px] rounded cursor-not-allowed">
                         Télécharger le menu PDF (14 Mo)
                       </button>
-                      <span className="text-[10px] text-stone-400">Tél : 01 XX XX XX XX</span>
+                      <span className="text-[11px] text-stone-400">Tél : 01 XX XX XX XX</span>
                     </div>
                   </div>
 
                   {/* Callout of flaws */}
                   <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-xs text-rose-900 space-y-2">
                     <div className="font-bold flex items-center gap-1.5 text-rose-800">
-                      <X className="w-4 h-4 text-rose-600" />
-                      Les anomalies qui font fuir vos visiteurs :
+                      <X className="w-4 h-4 text-rose-600 shrink-0" />
+                      <span>Les anomalies qui font fuir vos visiteurs :</span>
                     </div>
                     <ul className="list-disc list-inside space-y-1 text-rose-800/90 pl-1">
                       <li>Ratio de contraste insuffisant (1.8:1 au lieu de 4.5:1 minimum) : invisible pour les seniors ou en extérieur au soleil.</li>
@@ -220,8 +226,8 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                   {/* Highlights of success */}
                   <div className="bg-emerald-50/80 border border-emerald-200 rounded-xl p-4 text-xs text-emerald-950 space-y-2">
                     <div className="font-bold flex items-center gap-1.5 text-emerald-900">
-                      <Check className="w-4 h-4 text-emerald-700" />
-                      Les atouts majeurs qui génèrent des réservations :
+                      <Check className="w-4 h-4 text-emerald-700 shrink-0" />
+                      <span>Les atouts majeurs qui génèrent des réservations :</span>
                     </div>
                     <ul className="list-disc list-inside space-y-1 text-emerald-900/90 pl-1">
                       <li>Contraste optimal 8.5:1 : lisibilité parfaite en plein soleil en terrasse ou pour les personnes presbytes.</li>
