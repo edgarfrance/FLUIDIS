@@ -42,6 +42,7 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
               <li><a href="#constat" className="hover:text-white transition-colors">Le Constat et Pertes de Clients</a></li>
+              <li><a href="#risques" className="hover:text-white transition-colors">Risques Légaux et Amendes</a></li>
               <li><a href="#solution" className="hover:text-white transition-colors">Ce que nous proposons</a></li>
               <li><a href="#comparatif" className="hover:text-white transition-colors">Comparateur Avant / Après</a></li>
               <li><a href="#benefices" className="hover:text-white transition-colors">Bénéfices et ROI pour votre entreprise</a></li>

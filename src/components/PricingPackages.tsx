@@ -105,7 +105,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
 
               <div className="pt-2 pb-4 border-y border-stone-800 flex items-baseline gap-2">
                 <span className="font-serif text-4xl font-bold text-white">À partir de 890 €</span>
-                <span className="text-xs text-stone-400 font-medium">HT / Clé en main</span>
+                <span className="text-xs text-stone-400 font-medium">TTC / Clé en main</span>
               </div>
 
               <ul className="space-y-3 text-xs text-stone-300">

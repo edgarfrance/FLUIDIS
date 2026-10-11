@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TheProblem } from './components/TheProblem';
+import { LegalRisks } from './components/LegalRisks';
 import { TheSolution } from './components/TheSolution';
 import { BeforeAfterComparison } from './components/BeforeAfterComparison';
 import { Benefits } from './components/Benefits';
@@ -54,9 +55,14 @@ export default function App() {
           onExploreComparison={scrollToComparison} 
         />
 
-        {/* 2. Le Constat / Le Problème (Directive 2025 & clients perdus) */}
+        {/* 2. Le Constat / Le Problème (Pertes de clients et perte de trafic) */}
         <TheProblem 
           onOpenAudit={scrollToContact} 
+        />
+
+        {/* 2b. Les Risques Légaux et Sanctions Financières (Directive 2025, Amendes jusqu'à 25 000€) */}
+        <LegalRisks 
+          onOpenAudit={scrollToContact}
         />
 
         {/* 3. La Solution / Ce que nous proposons */}
@@ -79,7 +85,7 @@ export default function App() {
           onPreFillForm={handlePreFillFromSimulator} 
         />
 
-        {/* Les Formules & Tarifs clairs */}
+        {/* Les Formules & Tarifs clairs en TTC */}
         <PricingPackages 
           onSelectPlan={handleSelectPlan} 
         />

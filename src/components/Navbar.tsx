@@ -67,6 +67,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
             Le Constat
           </button>
           <button 
+            onClick={() => scrollTo('risques')} 
+            className="hover:text-stone-950 transition-colors cursor-pointer py-1 text-rose-800 font-semibold"
+          >
+            Risques et Loi
+          </button>
+          <button 
             onClick={() => scrollTo('solution')} 
             className="hover:text-stone-950 transition-colors cursor-pointer py-1"
           >
@@ -127,7 +133,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
             onClick={() => scrollTo('constat')}
             className="block w-full text-left py-2.5 text-sm font-medium text-stone-800 hover:text-amber-800 border-b border-stone-100"
           >
-            Le Constat et La Directive 2025
+            Le Constat et Pertes de Clients
+          </button>
+          <button
+            onClick={() => scrollTo('risques')}
+            className="block w-full text-left py-2.5 text-sm font-semibold text-rose-800 hover:text-rose-900 border-b border-stone-100"
+          >
+            Risques Légaux et Amendes 2025
           </button>
           <button
             onClick={() => scrollTo('solution')}

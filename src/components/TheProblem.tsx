@@ -14,7 +14,7 @@ export const TheProblem: React.FC<TheProblemProps> = ({ onOpenAudit }) => {
   const estimatedLostConversions = Math.max(1, Math.round(estimatedLostVisitors * 0.025));
 
   return (
-    <section id="constat" className="py-20 md:py-28 bg-white border-y border-stone-200/80">
+    <section id="constat" className="py-14 md:py-20 bg-white border-y border-stone-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
