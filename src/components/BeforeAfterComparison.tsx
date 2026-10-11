@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, Smartphone, ArrowRight, Sun, Sparkles, CheckCircle, AlertCircle } from 'lucide-react';
+import { Check, X, ArrowRight, Sun, Sparkles, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface BeforeAfterComparisonProps {
   onOpenAudit: () => void;
@@ -7,7 +7,7 @@ interface BeforeAfterComparisonProps {
 
 export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ onOpenAudit }) => {
   const [activeTab, setActiveTab] = useState<'after' | 'before'>('after');
-  const [simulationMode, setSimulationMode] = useState<'normal' | 'sun' | 'blur'>('normal');
+  const [simulationMode, setSimulationMode] = useState<'normal' | 'sun'>('normal');
 
   return (
     <section id="comparatif" className="py-20 md:py-28 bg-[#FAF8F5]">
@@ -17,7 +17,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-200 text-amber-900 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-            <span>Démonstration Visuelle & Concrète</span>
+            <span>Démonstration Visuelle et Concrète</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
@@ -25,58 +25,57 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
           </h2>
 
           <p className="text-base sm:text-lg text-stone-600 leading-relaxed">
-            Inspiré de la sobriété élégante de <em>mabonneadresse.com</em>, observez comment des ajustements de contraste, 
-            de typographie et de hiérarchie transforment instantanément l'expérience de vos visiteurs.
+            Observez concrètement comment des ajustements de contraste, de typographie et de hiérarchie visuelle 
+            transforment instantanément l'expérience de vos visiteurs.
           </p>
         </div>
 
-        {/* Interactive Controls Bar */}
+        {/* Interactive Controls Bar without overlapping label */}
         <div className="max-w-2xl mx-auto mb-10 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-2.5 rounded-2xl shadow-sm border border-stone-200">
           
           {/* Main State Switcher */}
           <div className="flex w-full sm:w-auto p-1 bg-stone-100 rounded-xl">
             <button
               onClick={() => setActiveTab('before')}
-              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                 activeTab === 'before'
                   ? 'bg-white text-rose-800 shadow-sm'
                   : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              Site actuel classique (Non optimisé)
+              Site actuel (Non optimisé)
             </button>
             <button
               onClick={() => setActiveTab('after')}
-              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-1 sm:flex-none px-5 py-2.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                 activeTab === 'after'
                   ? 'bg-stone-900 text-amber-400 shadow-sm'
                   : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              Site refondu (Accessible & Sobre)
+              Site refondu (Accessible et Épuré)
             </button>
           </div>
 
-          {/* Environmental simulation filter */}
-          <div className="flex items-center gap-1.5 text-xs text-stone-600 w-full sm:w-auto justify-end">
-            <span className="text-[11px] text-stone-600 font-medium hidden sm:inline">Tester en condition :</span>
+          {/* Environmental simulation filter buttons */}
+          <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
             <button
               onClick={() => setSimulationMode('normal')}
-              className={`px-2.5 py-1.5 rounded-md text-xs font-medium transition-colors ${
+              className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                 simulationMode === 'normal' ? 'bg-stone-200 text-stone-900 font-semibold' : 'hover:bg-stone-100 text-stone-600'
               }`}
             >
-              Vue normale
+              Vue standard
             </button>
             <button
               onClick={() => setSimulationMode('sun')}
-              className={`px-2.5 py-1.5 rounded-md text-xs font-medium flex items-center gap-1 transition-colors ${
+              className={`px-3 py-2 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
                 simulationMode === 'sun' ? 'bg-amber-100 text-amber-900 font-semibold border border-amber-300' : 'hover:bg-stone-100 text-stone-600'
               }`}
               title="Simule la perte de lisibilité sous la lumière du soleil"
             >
-              <Sun className="w-3 h-3 text-amber-600" />
-              Plein soleil
+              <Sun className="w-3.5 h-3.5 text-amber-600" />
+              <span>Simuler le plein soleil</span>
             </button>
           </div>
 
@@ -97,7 +96,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                 <span className="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
                 <span className="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
                 <span className="ml-2 font-sans font-medium text-xs">
-                  {activeTab === 'before' ? 'mon-restaurant-actuel.fr (Version vieillissante)' : 'bistrot-charlot.fr (Refonte Clarté & Sobriété)'}
+                  {activeTab === 'before' ? 'mon-restaurant-actuel.fr (Version vieillissante)' : 'bistrot-charlot.fr (Refonte Clarté et Sobriété)'}
                 </span>
               </div>
               <div className="flex items-center gap-2 font-sans text-xs">
@@ -134,17 +133,15 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
 
                   {/* Problematic low-contrast hero */}
                   <div className="py-6 space-y-4">
-                    {/* Light gray text on white fail */}
                     <div className="text-[11px] text-stone-400 tracking-wider">Bienvenue chez nous depuis 2014</div>
                     <h3 className="text-2xl sm:text-3xl font-light text-stone-400">
-                      Cuisine du marché & saveurs de saison
+                      Cuisine du marché et saveurs de saison
                     </h3>
                     <p className="text-xs text-stone-400 max-w-lg leading-relaxed">
                       Nous vous accueillons du mardi au samedi midi et soir. Découvrez nos plats faits maison avec des produits frais du terroir français.
                     </p>
 
                     <div className="flex items-center gap-3 pt-3">
-                      {/* Tiny inaccessible button */}
                       <button className="px-3 py-1 bg-stone-300 text-white text-[11px] rounded cursor-not-allowed">
                         Télécharger le menu PDF (14 Mo)
                       </button>
@@ -189,7 +186,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                     <div className="md:col-span-8 space-y-3">
                       <span className="text-xs font-semibold tracking-wider uppercase text-amber-800">
-                        Produits de saison & Cave d'auteurs
+                        Produits de saison et Cave d'auteurs
                       </span>
                       <h3 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900 leading-tight">
                         Une cuisine sincère, accessible à chaque gourmet.
@@ -211,11 +208,11 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
                     </div>
 
                     <div className="md:col-span-4 bg-white p-4 rounded-xl border border-stone-200 space-y-2 text-xs">
-                      <div className="font-bold text-stone-900">Horaires & Accès Facile</div>
+                      <div className="font-bold text-stone-900">Horaires et Accès Facile</div>
                       <div className="text-stone-600 space-y-1">
                         <div>Mar - Sam : 12h - 14h30 · 19h - 23h</div>
                         <div className="text-emerald-700 font-medium">Accessible PMR de plain-pied</div>
-                        <div className="text-stone-500">Métro Oberkampf (Ligne 5 & 9)</div>
+                        <div className="text-stone-500">Métro Oberkampf (Ligne 5 et 9)</div>
                       </div>
                     </div>
                   </div>

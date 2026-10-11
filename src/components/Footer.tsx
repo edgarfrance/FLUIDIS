@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Heart, ShieldCheck, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -20,13 +20,13 @@ export const Footer: React.FC = () => {
                 C
               </div>
               <span className="font-serif text-xl font-bold text-white tracking-tight">
-                CLARTÉ & ACCESSIBILITÉ
+                CLARTÉ ET ACCESSIBILITÉ
               </span>
             </div>
             
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
               Studio spécialisé dans la refonte de sites web et landing pages pour commerces, restaurants et PME. 
-              Inspiré par la sobriété et l'élégance de <em>mabonneadresse.com</em>, au service de l'inclusion et de la conversion.
+              Conception de sites sobres, rapides et universellement accessibles, au service de l'inclusion et de la conversion.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-amber-400/90 pt-1">
@@ -41,11 +41,11 @@ export const Footer: React.FC = () => {
               Navigation
             </h4>
             <ul className="space-y-2 text-xs text-stone-400">
-              <li><a href="#constat" className="hover:text-white transition-colors">Le Constat & Pertes de Clients</a></li>
+              <li><a href="#constat" className="hover:text-white transition-colors">Le Constat et Pertes de Clients</a></li>
               <li><a href="#solution" className="hover:text-white transition-colors">Ce que nous proposons</a></li>
               <li><a href="#comparatif" className="hover:text-white transition-colors">Comparateur Avant / Après</a></li>
-              <li><a href="#benefices" className="hover:text-white transition-colors">Bénéfices & ROI pour votre entreprise</a></li>
-              <li><a href="#formules" className="hover:text-white transition-colors">Formules & Tarifs Clairs</a></li>
+              <li><a href="#benefices" className="hover:text-white transition-colors">Bénéfices et ROI pour votre entreprise</a></li>
+              <li><a href="#formules" className="hover:text-white transition-colors">Formules et Tarifs Clairs</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">Questions Fréquentes</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Demander un audit gratuit</a></li>
             </ul>
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
           {/* Contact Direct */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="text-xs font-semibold uppercase tracking-wider text-stone-100 font-serif">
-              Contact & Permanence
+              Contact et Permanence
             </h4>
             <ul className="space-y-2.5 text-xs text-stone-400">
               <li className="flex items-center gap-2">
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <div className="flex flex-wrap items-center gap-4">
-            <span>© {new Date().getFullYear()} Clarté & Accessibilité. Tous droits réservés.</span>
+            <span>© {new Date().getFullYear()} Clarté et Accessibilité. Tous droits réservés.</span>
             <span>·</span>
             <span className="hover:text-stone-400">Mentions Légales</span>
             <span>·</span>

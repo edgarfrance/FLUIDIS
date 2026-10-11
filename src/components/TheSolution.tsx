@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, CheckCheck, Smartphone, ShieldCheck, ArrowRight, Compass, Sparkles, FileText } from 'lucide-react';
+import { CheckCheck, ArrowRight, Compass } from 'lucide-react';
 
 interface TheSolutionProps {
   onOpenAudit: () => void;
@@ -14,7 +14,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold uppercase tracking-wider">
             <Compass className="w-3.5 h-3.5 text-stone-600" />
-            <span>Notre Approche & Savoir-Faire</span>
+            <span>Notre Approche et Savoir-Faire</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
@@ -36,7 +36,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 01
               </div>
-              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Design & Image de marque</span>
+              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Design et Image de marque</span>
             </div>
             
             <h3 className="font-serif text-2xl font-bold text-stone-900">
@@ -44,7 +44,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
             </h3>
             
             <p className="text-stone-600 text-sm leading-relaxed">
-              Inspirée de la direction artistique soignée de <em>mabonneadresse.com</em> : typographies raffinées, 
+              Une direction artistique soignée et intemporelle : typographies raffinées, 
               grilles aérées, photographies magnifiées et mise en valeur immédiate de votre identité. 
               Votre site inspire la confiance dès la première seconde.
             </p>
@@ -97,11 +97,11 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 03
               </div>
-              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Ergonomie & Vitesse</span>
+              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Ergonomie et Vitesse</span>
             </div>
             
             <h3 className="font-serif text-2xl font-bold text-stone-900">
-              Expérience mobile fluide & conversion directe
+              Expérience mobile fluide et conversion directe
             </h3>
             
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -127,11 +127,11 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 04
               </div>
-              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Conformité & Sérénité</span>
+              <span className="text-xs font-medium text-stone-500 uppercase tracking-wider">Conformité et Sérénité</span>
             </div>
             
             <h3 className="font-serif text-2xl font-bold text-stone-900">
-              Mentions obligatoires & Déclaration légale
+              Mentions obligatoires et Déclaration légale
             </h3>
             
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -160,12 +160,12 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
               Méthodologie transparente en 3 étapes
             </div>
             <div className="font-serif text-xl sm:text-2xl font-bold text-stone-900">
-              1. Diagnostic gratuit → 2. Maquette chic sous 5 jours → 3. Mise en ligne sans coupure
+              1. Diagnostic gratuit → 2. Maquette sobre sous 5 jours → 3. Mise en ligne sans coupure
             </div>
           </div>
           <button
             onClick={onOpenAudit}
-            className="shrink-0 px-6 py-3.5 rounded-xl bg-stone-900 text-white hover:bg-stone-800 text-xs font-semibold inline-flex items-center gap-2 transition-all shadow-sm"
+            className="shrink-0 px-6 py-3.5 rounded-xl bg-stone-900 text-white hover:bg-stone-800 text-xs font-semibold inline-flex items-center gap-2 transition-all shadow-xs cursor-pointer"
           >
             <span>Démarrer par l'audit gratuit</span>
             <ArrowRight className="w-4 h-4 text-amber-400" />

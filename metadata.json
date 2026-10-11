@@ -1,6 +1,6 @@
 {
-  "name": "Refonte Web & Accessibilité - Landing Page PME & Commerces",
-  "description": "Landing page de haute conversion pour la refonte de sites web et landing pages pour PME, commerces et restaurants : accessibilité numérique, conformité Directive 2025 et design épuré inspiré de mabonneadresse.com.",
+  "name": "Refonte Web et Accessibilité - Landing Page PME et Commerces",
+  "description": "Landing page à haute conversion pour la refonte de sites web et landing pages pour PME, commerces et restaurants : accessibilité numérique, conformité Directive 2025 et design sobre.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -23,12 +23,12 @@ export const FAQ: React.FC = () => {
       answer: "Pour une Landing Page Express, comptez 5 à 7 jours ouvrés. Pour un site vitrine multi-pages, entre 10 et 15 jours. Pendant toute la phase de conception, votre site actuel reste 100% actif et accessible pour vos clients. La bascule finale prend moins de 15 minutes, sans aucune interruption."
     },
     {
-      question: "Pourquoi privilégier un style sobre inspiré de mabonneadresse.com ?",
-      answer: "Parce que l'élégance intemporelle surpasse toujours les modes passagères. Le style épuré, les contrastes nobles et la clarté typographique permettent à vos visiteurs de trouver l'information en 3 secondes : vos horaires, votre savoir-faire, vos prix et comment vous contacter. C'est le secret d'un site qui convertit."
+      question: "Pourquoi privilégier un style sobre et épuré pour mon site web ?",
+      answer: "Parce que l'élégance intemporelle et la clarté surpassent toujours les effets de mode éphémères. Le style épuré, les contrastes nobles et la lisibilité typographique permettent à vos visiteurs de trouver l'information en 3 secondes : vos horaires, votre savoir-faire, vos prix et comment vous contacter. Moins de fioritures techniques inutiles, c'est aussi un site beaucoup plus rapide et qui convertit bien mieux."
     },
     {
       question: "En quoi consiste l'audit flash gratuit ?",
-      answer: "Nous examinons manuellement et techniquement votre page d'accueil : analyse des contrastes colorimétriques, test de fluidité sur mobile, clarté des appels à l'action et conformité des mentions. Vous recevez un compte-rendu clair et sans jargon sous 24h, sans aucune obligation d'achat."
+      answer: "Nous examinons manuellement et techniquement votre page d'accueil : analyse des contrastes colorimétriques, test de fluidité sur mobile, clarté des appels à l'action et conformité des mentions. Vous recevez un compte-rendu clair et sans jargon sous 24h ouvrées, sans aucune obligation d'achat."
     }
   ];
 

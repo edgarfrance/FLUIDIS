@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Phone, Mail, Globe, User, Building, Send, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Phone, Mail, Globe, User, Building, Sparkles } from 'lucide-react';
 import { ActivitySector, AuditFormData } from '../types';
 
 interface ContactFormProps {
@@ -63,7 +63,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-200 text-amber-900 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-            <span>Passage à l'Action · Gratuit & Sans Engagement</span>
+            <span>Passage à l'Action · Gratuit et Sans Engagement</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
@@ -138,7 +138,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                 {/* Nom complet */}
                 <div className="space-y-2">
                   <label htmlFor="fullName" className="block text-xs font-bold uppercase tracking-wider text-stone-700">
-                    Votre Nom & Prénom <span className="text-rose-500">*</span>
+                    Votre Nom et Prénom <span className="text-rose-500">*</span>
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400">
@@ -159,7 +159,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                 {/* Nom de l'entreprise */}
                 <div className="space-y-2">
                   <label htmlFor="businessName" className="block text-xs font-bold uppercase tracking-wider text-stone-700">
-                    Nom de votre établissement / Entreprise <span className="text-rose-500">*</span>
+                    Nom de votre établissement ou Entreprise <span className="text-rose-500">*</span>
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400">
@@ -255,10 +255,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                     className="w-full px-4 py-3 rounded-xl border border-stone-300 text-stone-900 text-sm focus:border-stone-900 focus:ring-1 focus:ring-stone-900 transition-colors bg-white"
                   >
                     <option value="restaurant">Restaurant / Bar / Café</option>
-                    <option value="commerce">Boutique & Commerce de détail</option>
-                    <option value="artisan">Artisanat / Métiers de bouche</option>
-                    <option value="services">PME, Profession libérale & Services</option>
-                    <option value="sante">Santé, Bien-être & Médical</option>
+                    <option value="commerce">Boutique et Commerce de détail</option>
+                    <option value="artisan">Artisanat et Métiers de bouche</option>
+                    <option value="services">PME, Profession libérale et Services</option>
+                    <option value="sante">Santé, Bien-être et Médical</option>
                     <option value="autre">Autre activité</option>
                   </select>
                 </div>
@@ -276,7 +276,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                   >
                     <option value="immediate">Dès que possible (dans les 10 jours)</option>
                     <option value="month">Dans le mois à venir</option>
-                    <option value="info">Simple renseignement & audit préventif</option>
+                    <option value="info">Simple renseignement et audit préventif</option>
                   </select>
                 </div>
 
@@ -290,7 +290,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                 <textarea
                   id="message"
                   rows={3}
-                  placeholder="ex: Notre carte du midi change souvent, nous voulons un site facile à lire pour nos clients seniors et bien classé sur Google..."
+                  placeholder="ex: Notre carte change souvent, nous voulons un site facile à lire pour nos clients seniors et bien classé sur Google..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl border border-stone-300 text-stone-900 text-sm focus:border-stone-900 focus:ring-1 focus:ring-stone-900 transition-colors"
@@ -326,7 +326,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
                   </div>
                   <div className="flex items-center justify-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>100% gratuit & sans engagement</span>
+                    <span>100% gratuit et sans engagement</span>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, PhoneCall, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Menu, X, PhoneCall, ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   onOpenAudit: () => void;
@@ -18,7 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
-      {/* Top micro-bar chic */}
+      {/* Top micro-bar */}
       <div className="bg-stone-900 text-stone-300 text-xs py-1.5 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-[11px] sm:text-xs">
           <div className="flex items-center gap-2">
@@ -43,17 +43,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
 
       {/* Main navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand identity inspired by mabonneadresse.com */}
+        {/* Brand identity */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif text-xl font-bold tracking-tight shadow-sm border border-stone-800">
             C
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-xl font-bold text-stone-900 tracking-tight group-hover:text-stone-800 transition-colors">
-              CLARTÉ <span className="font-light italic text-stone-600">&</span> ACCESSIBILITÉ
+              CLARTÉ <span className="font-light italic text-stone-600">ET</span> ACCESSIBILITÉ
             </span>
             <span className="text-[11px] uppercase tracking-wider text-stone-500 font-medium">
-              Refonte Web pour PME & Commerces
+              Refonte Web pour PME et Commerces
             </span>
           </div>
         </a>
@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
             onClick={() => scrollTo('constat')}
             className="block w-full text-left py-2.5 text-sm font-medium text-stone-800 hover:text-amber-800 border-b border-stone-100"
           >
-            Le Constat & La Directive 2025
+            Le Constat et La Directive 2025
           </button>
           <button
             onClick={() => scrollTo('solution')}
@@ -146,13 +146,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
             onClick={() => scrollTo('benefices')}
             className="block w-full text-left py-2.5 text-sm font-medium text-stone-800 hover:text-amber-800 border-b border-stone-100"
           >
-            Bénéfices & ROI
+            Bénéfices et ROI
           </button>
           <button
             onClick={() => scrollTo('formules')}
             className="block w-full text-left py-2.5 text-sm font-medium text-stone-800 hover:text-amber-800 border-b border-stone-100"
           >
-            Formules & Tarifs
+            Formules et Tarifs
           </button>
           <button
             onClick={() => scrollTo('faq')}

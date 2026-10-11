@@ -14,7 +14,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-stone-600" />
-            <span>Formules Claires & Sans Surprise</span>
+            <span>Formules Claires et Sans Surprise</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
@@ -38,7 +38,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
                   Diagnostic Initial
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-stone-900">
-                  Audit Flash & Recommandations
+                  Audit Flash et Recommandations
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
                   L'état des lieux sans engagement de votre site actuel : contrastes, mobilité et conformité 2025.
@@ -93,7 +93,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs uppercase tracking-wider text-amber-400 font-bold">
-                  Commerces & Restaurants
+                  Commerces et Restaurants
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white">
                   Refonte Landing Page Express
@@ -111,7 +111,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
               <ul className="space-y-3 text-xs text-stone-300">
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                  <span>Design épuré et chic inspiré de <em>mabonneadresse.com</em></span>
+                  <span>Design sobre, chic et intemporel</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
@@ -127,7 +127,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                  <span>Mentions légales & déclaration d'accessibilité incluses</span>
+                  <span>Mentions légales et déclaration d'accessibilité incluses</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
@@ -141,11 +141,11 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
                 onClick={() => onSelectPlan('Refonte Landing Page Express')}
                 className="w-full py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs transition-all text-center block cursor-pointer shadow-md"
               >
-                Choisir cette formule & réserver un créneau
+                Choisir cette formule et réserver un créneau
               </button>
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-stone-400">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-                <span>Garantie conformité & satisfaction</span>
+                <span>Garantie conformité et satisfaction</span>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs uppercase tracking-wider text-stone-500 font-bold">
-                  PME & Établissements Établis
+                  PME et Établissements Établis
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-stone-900">
                   Refonte Site Vitrine Complet

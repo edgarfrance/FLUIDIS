@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AlertTriangle, Users, EyeOff, Smartphone, Scale, ArrowRight, TrendingDown, HelpCircle } from 'lucide-react';
+import { AlertTriangle, Users, EyeOff, Smartphone, Scale, ArrowRight, TrendingDown } from 'lucide-react';
 
 interface TheProblemProps {
   onOpenAudit: () => void;
@@ -21,7 +21,7 @@ export const TheProblem: React.FC<TheProblemProps> = ({ onOpenAudit }) => {
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold uppercase tracking-wider">
             <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
-            <span>Le Constat & La Réalité du Web Actuel</span>
+            <span>Le Constat et La Réalité du Web Actuel</span>
           </div>
           
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-tight">
@@ -44,10 +44,10 @@ export const TheProblem: React.FC<TheProblemProps> = ({ onOpenAudit }) => {
                 <EyeOff className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-stone-900">
-                Contrastes faibles & polices illisibles
+                Contrastes faibles et polices illisibles
               </h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Le fameux texte gris clair sur fond blanc à la mode en 2018 est un cauchemar pour les yeux. 
+                Le fameux texte gris clair sur fond blanc à la mode en 2018 est un calvaire pour les yeux. 
                 Pour les personnes de plus de 45 ans, les myopes ou les clients consultant votre site sur smartphone en extérieur, 
                 vos tarifs et menus sont tout simplement illisibles.
               </p>
@@ -65,7 +65,7 @@ export const TheProblem: React.FC<TheProblemProps> = ({ onOpenAudit }) => {
                 <Smartphone className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-stone-900">
-                Menus scannés & boutons microscopiques
+                Menus scannés et boutons microscopiques
               </h3>
               <p className="text-sm text-stone-600 leading-relaxed">
                 Des PDF lourds à télécharger pour voir une carte, des numéros de téléphone non cliquables, 
