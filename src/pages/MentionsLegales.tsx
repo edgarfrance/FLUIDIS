@@ -14,7 +14,7 @@ export const MentionsLegales: React.FC<MentionsLegalesProps> = ({ onBackToHome, 
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-stone-900 py-10 md:py-16 font-sans">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Navigation retour et en-tête de marque */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-6 border-b border-stone-200">

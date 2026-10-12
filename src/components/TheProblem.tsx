@@ -14,11 +14,11 @@ export const TheProblem: React.FC<TheProblemProps> = ({ onOpenAudit }) => {
   const estimatedLostConversions = Math.max(1, Math.round(estimatedLostVisitors * 0.025));
 
   return (
-    <section id="constat" className="py-14 md:py-20 bg-white border-y border-stone-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="constat" className="py-12 md:py-20 bg-white border-y border-stone-200/80">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12 md:mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-800 text-xs font-semibold uppercase tracking-wider">
             <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
             <span>Le Constat et La Réalité du Web Actuel</span>

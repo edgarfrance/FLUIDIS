@@ -7,8 +7,8 @@ interface PricingPackagesProps {
 
 export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }) => {
   return (
-    <section id="formules" className="py-20 md:py-28 bg-[#FAF8F5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="formules" className="py-12 md:py-28 bg-[#FAF8F5]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -31,7 +31,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           
           {/* Plan 1: Audit Flash Gratuit */}
-          <div className="bg-white rounded-3xl p-8 border border-stone-200 flex flex-col justify-between hover:shadow-md transition-all">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 flex flex-col justify-between hover:shadow-md transition-all">
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs uppercase tracking-wider text-stone-500 font-bold">
@@ -85,7 +85,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
           </div>
 
           {/* Plan 2: Landing Page Express (STAR) */}
-          <div className="bg-stone-900 text-stone-100 rounded-3xl p-8 border-2 border-amber-500 flex flex-col justify-between shadow-xl relative scale-102">
+          <div className="bg-stone-900 text-stone-100 rounded-3xl p-6 sm:p-8 border-2 border-amber-500 flex flex-col justify-between shadow-xl relative lg:scale-102">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-stone-950 text-[11px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
               La Formule la Plus Demandée
             </div>
@@ -151,7 +151,7 @@ export const PricingPackages: React.FC<PricingPackagesProps> = ({ onSelectPlan }
           </div>
 
           {/* Plan 3: Refonte Complète Multi-Pages */}
-          <div className="bg-white rounded-3xl p-8 border border-stone-200 flex flex-col justify-between hover:shadow-md transition-all">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 flex flex-col justify-between hover:shadow-md transition-all">
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="text-xs uppercase tracking-wider text-stone-500 font-bold">

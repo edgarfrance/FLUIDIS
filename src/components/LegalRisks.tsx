@@ -7,8 +7,8 @@ interface LegalRisksProps {
 
 export const LegalRisks: React.FC<LegalRisksProps> = ({ onOpenAudit }) => {
   return (
-    <section id="risques" className="py-16 md:py-24 bg-[#FAF8F5] border-b border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="risques" className="py-12 md:py-24 bg-[#FAF8F5] border-b border-stone-200">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">

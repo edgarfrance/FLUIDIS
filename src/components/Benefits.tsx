@@ -7,8 +7,8 @@ interface BenefitsProps {
 
 export const Benefits: React.FC<BenefitsProps> = ({ onOpenAudit }) => {
   return (
-    <section id="benefices" className="py-20 md:py-28 bg-[#FAF8F5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="benefices" className="py-12 md:py-28 bg-[#FAF8F5]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -31,7 +31,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onOpenAudit }) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           
           {/* Benefit 1 */}
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200/60 text-amber-900 flex items-center justify-center">
                 <Users className="w-7 h-7 text-amber-700" />
@@ -59,7 +59,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onOpenAudit }) => {
           </div>
 
           {/* Benefit 2 */}
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-stone-100 border border-stone-200 text-stone-800 flex items-center justify-center">
                 <Sparkles className="w-7 h-7 text-stone-700" />
@@ -87,7 +87,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onOpenAudit }) => {
           </div>
 
           {/* Benefit 3 */}
-          <div className="bg-white p-8 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-10 rounded-3xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
             <div className="space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/60 text-emerald-900 flex items-center justify-center">
                 <Zap className="w-7 h-7 text-emerald-700" />

@@ -10,8 +10,8 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
   const [simulationMode, setSimulationMode] = useState<'normal' | 'sun'>('normal');
 
   return (
-    <section id="comparatif" className="py-20 md:py-28 bg-[#FAF8F5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="comparatif" className="py-12 md:py-28 bg-[#FAF8F5]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
@@ -119,7 +119,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({ on
             </div>
 
             {/* Simulated Webpage Canvas */}
-            <div className={`p-6 sm:p-10 transition-all ${
+            <div className={`p-4 sm:p-10 transition-all ${
               simulationMode === 'sun' ? 'brightness-125 contrast-75 bg-[#FFFDF8]' : ''
             } ${activeTab === 'before' ? 'bg-[#FCFCFC]' : 'bg-[#FAF8F5]'}`}>
               

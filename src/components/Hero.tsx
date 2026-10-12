@@ -8,8 +8,8 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenAudit, onExploreComparison }) => {
   return (
-    <section className="relative pt-12 pb-12 md:pt-18 md:pb-14 bg-[#FAF8F5]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative pt-10 pb-12 md:pt-18 md:pb-14 bg-[#FAF8F5]">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
         
         {/* Kicker sobre */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-100 border border-stone-200/90 text-stone-700 text-xs font-medium tracking-wide mb-6">

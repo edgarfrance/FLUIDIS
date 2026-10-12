@@ -33,8 +33,8 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-white border-t border-stone-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-12 md:py-28 bg-white border-t border-stone-200">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
@@ -63,10 +63,10 @@ export const FAQ: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-stone-100/50 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-stone-100/50 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg sm:text-xl font-bold text-stone-900">
+                  <span className="font-serif text-base sm:text-xl font-bold text-stone-900">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -77,7 +77,7 @@ export const FAQ: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-stone-600 text-sm leading-relaxed border-t border-stone-200/60 pt-4 animate-in fade-in duration-150">
+                  <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-stone-600 text-sm leading-relaxed border-t border-stone-200/60 pt-4 animate-in fade-in duration-150">
                     {faq.answer}
                   </div>
                 )}

@@ -19,30 +19,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
       {/* Top micro-bar */}
-      <div className="bg-stone-900 text-stone-300 text-xs py-1.5 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-[11px] sm:text-xs">
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span className="text-stone-300">Directive Européenne Accessibilité 2025</span>
+      <div className="bg-stone-900 text-stone-300 text-xs py-1.5 px-5 sm:px-8">
+        <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-2 text-[11px] sm:text-xs">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-left">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+            <span className="text-stone-300 font-medium">Directive UE 2025</span>
             <span className="hidden md:inline text-stone-500">·</span>
             <span className="hidden md:inline text-stone-400">Ne perdez plus 20% de vos clients sur le web</span>
           </div>
-          <div className="flex items-center gap-4 text-stone-300">
+          <div className="flex items-center gap-2.5 sm:gap-4 text-stone-300 shrink-0 text-right">
             <a 
               href="tel:0695584056" 
-              className="hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium"
+              className="hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium text-[11px] sm:text-xs"
             >
-              <PhoneCall className="w-3 h-3 text-amber-400" />
+              <PhoneCall className="w-3 h-3 text-amber-400 shrink-0" />
               <span>06 95 58 40 56</span>
             </a>
-            <span className="text-stone-600">|</span>
-            <span className="text-stone-400">Audit offert sous 24h</span>
+            <span className="hidden xs:inline text-stone-600">|</span>
+            <span className="hidden sm:inline text-stone-400">Audit offert sous 24h</span>
           </div>
         </div>
       </div>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand identity */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif text-xl font-bold tracking-tight shadow-sm border border-stone-800">
@@ -122,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#FAF8F5] border-b border-stone-200 px-4 pt-3 pb-6 space-y-3">
+        <div className="lg:hidden bg-[#FAF8F5] border-b border-stone-200 px-5 sm:px-6 pt-3 pb-6 space-y-3">
           <button
             onClick={() => scrollTo('constat')}
             className="block w-full text-left py-2.5 text-sm font-medium text-stone-800 hover:text-amber-800 border-b border-stone-100"

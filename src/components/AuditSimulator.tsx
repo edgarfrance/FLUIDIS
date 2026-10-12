@@ -162,8 +162,8 @@ export const AuditSimulator: React.FC<AuditSimulatorProps> = ({ onPreFillForm })
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white border-y border-stone-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-24 bg-white border-y border-stone-200">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center space-y-3 mb-10">
@@ -210,7 +210,7 @@ export const AuditSimulator: React.FC<AuditSimulatorProps> = ({ onPreFillForm })
         </div>
 
         {/* Questions Grid */}
-        <div className="space-y-4 bg-[#FAF8F5] p-6 sm:p-8 rounded-3xl border border-stone-200">
+        <div className="space-y-4 bg-[#FAF8F5] p-5 sm:p-8 rounded-3xl border border-stone-200">
           
           {/* Question 1 */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-stone-200">
@@ -328,7 +328,7 @@ export const AuditSimulator: React.FC<AuditSimulatorProps> = ({ onPreFillForm })
 
         {/* Dynamic Reactive Diagnosis Box */}
         {dynamicResult && (
-          <div className="mt-6 p-6 sm:p-8 rounded-2xl bg-stone-900 text-stone-100 border border-stone-800 space-y-4 animate-in fade-in duration-200">
+          <div className="mt-6 p-5 sm:p-8 rounded-2xl bg-stone-900 text-stone-100 border border-stone-800 space-y-4 animate-in fade-in duration-200">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               
               <div className="space-y-2">

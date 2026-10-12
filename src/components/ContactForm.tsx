@@ -56,11 +56,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#FAF8F5] border-t border-stone-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 md:py-28 bg-[#FAF8F5] border-t border-stone-200">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 md:mb-14">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 border border-amber-200 text-amber-900 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
             <span>Passage à l'Action · Gratuit et Sans Engagement</span>
@@ -77,7 +77,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
         </div>
 
         {/* Form Container */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/90 relative overflow-hidden">
+        <div className="bg-white rounded-3xl p-6 sm:p-12 shadow-xl border border-stone-200/90 relative overflow-hidden">
           
           {isSubmitted ? (
             /* Success confirmation */

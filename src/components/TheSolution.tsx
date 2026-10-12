@@ -7,8 +7,8 @@ interface TheSolutionProps {
 
 export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
   return (
-    <section id="solution" className="py-20 md:py-28 bg-white border-t border-stone-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="solution" className="py-12 md:py-28 bg-white border-t border-stone-200/80">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -28,10 +28,10 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
         </div>
 
         {/* 4 Pillars of Solution */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 md:mb-16">
           
           {/* Pillar 1 */}
-          <div className="p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 01
@@ -62,7 +62,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
           </div>
 
           {/* Pillar 2 */}
-          <div className="p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 02
@@ -92,7 +92,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
           </div>
 
           {/* Pillar 3 */}
-          <div className="p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 03
@@ -122,7 +122,7 @@ export const TheSolution: React.FC<TheSolutionProps> = ({ onOpenAudit }) => {
           </div>
 
           {/* Pillar 4 */}
-          <div className="p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#FAF8F5] border border-stone-200/90 hover:border-stone-300 transition-all space-y-5">
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-2xl bg-stone-900 text-amber-400 flex items-center justify-center font-serif font-bold text-lg">
                 04
