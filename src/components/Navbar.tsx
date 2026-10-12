@@ -29,11 +29,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit }) => {
           </div>
           <div className="flex items-center gap-4 text-stone-300">
             <a 
-              href="tel:0189712345" 
+              href="tel:0695584056" 
               className="hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium"
             >
               <PhoneCall className="w-3 h-3 text-amber-400" />
-              <span>01 89 71 23 45</span>
+              <span>06 95 58 40 56</span>
             </a>
             <span className="text-stone-600">|</span>
             <span className="text-stone-400">Audit offert sous 24h</span>

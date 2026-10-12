@@ -1,12 +1,11 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ShieldCheck, ArrowUp } from 'lucide-react';
-import { LegalModalType } from './LegalModals';
 
 interface FooterProps {
-  onOpenLegal?: (type: 'mentions' | 'privacy' | 'accessibility') => void;
+  onNavigateTo?: (page: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigateTo }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -65,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <ul className="space-y-2.5 text-xs text-stone-400">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href="tel:0189712345" className="hover:text-white transition-colors">01 89 71 23 45 (Lundi au Vendredi, 9h-19h)</a>
+                <a href="tel:0695584056" className="hover:text-white transition-colors font-medium">06 95 58 40 56 (Lundi au Vendredi, 9h-19h)</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
@@ -84,27 +83,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
 
         </div>
 
-        {/* Bottom bar with interactive legal modals */}
+        {/* Bottom bar with dedicated legal page links */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
           <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <span>© {new Date().getFullYear()} Amblia Web · EI EDGAR DUPRAT. Tous droits réservés.</span>
             <span>·</span>
             <button
-              onClick={() => onOpenLegal?.('mentions')}
+              onClick={() => onNavigateTo ? onNavigateTo('mentions-legales') : window.location.hash = '#mentions-legales'}
               className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
             >
               Mentions Légales
             </button>
             <span>·</span>
             <button
-              onClick={() => onOpenLegal?.('privacy')}
+              onClick={() => onNavigateTo ? onNavigateTo('politique-confidentialite') : window.location.hash = '#politique-confidentialite'}
               className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
             >
               Politique de Confidentialité
             </button>
             <span>·</span>
             <button
-              onClick={() => onOpenLegal?.('accessibility')}
+              onClick={() => onNavigateTo ? onNavigateTo('declaration-accessibilite') : window.location.hash = '#declaration-accessibilite'}
               className="hover:text-stone-300 transition-colors cursor-pointer underline-offset-2 hover:underline"
             >
               Déclaration d'Accessibilité (WCAG 2.2 AA)
