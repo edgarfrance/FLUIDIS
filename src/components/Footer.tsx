@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTo }) => {
             <ul className="space-y-2.5 text-xs text-stone-400">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href="tel:0695584056" className="hover:text-white transition-colors font-medium">06 95 58 40 56 (Lundi au Vendredi, 9h-19h)</a>
+                <a href="tel:0695584056" className="hover:text-white transition-colors font-medium">06 95 58 40 56 (Lundi au Dimanche, 10h-20h)</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
