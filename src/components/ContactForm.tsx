@@ -22,7 +22,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [referenceId, setReferenceId] = useState('');
 
   useEffect(() => {
     if (initialPlan) {
@@ -42,17 +41,56 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
     }
   }, [initialAnswers]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate reliable submission
-    setTimeout(() => {
-      const generatedRef = 'AUDIT-' + Math.floor(100000 + Math.random() * 900000);
-      setReferenceId(generatedRef);
+    const sectorLabels: Record<string, string> = {
+      restaurant: 'Restaurant / Bar / Café',
+      commerce: 'Boutique et Commerce de détail',
+      artisan: 'Artisanat et Métiers de bouche',
+      services: 'PME, Profession libérale et Services',
+      sante: 'Santé, Bien-être et Médical',
+      autre: 'Autre activité',
+    };
+
+    const urgencyLabels: Record<string, string> = {
+      immediate: 'Dès que possible (dans les 10 jours)',
+      month: 'Dans le mois à venir',
+      info: 'Simple renseignement et audit préventif',
+    };
+
+    const payload = {
+      _subject: `Nouvelle demande de lead Amblia Web - ${formData.businessName || formData.fullName}`,
+      _captcha: 'false',
+      _template: 'table',
+      _replyto: formData.email,
+      "Nom et prénom": formData.fullName,
+      "Entreprise ou établissement": formData.businessName,
+      "Site web ou lien": formData.websiteUrl,
+      "Email": formData.email,
+      "Téléphone": formData.phone,
+      "Secteur d'activité": sectorLabels[formData.sector] || formData.sector,
+      "Échéance souhaitée": urgencyLabels[formData.urgency] || formData.urgency,
+      "Formule d'intérêt": initialPlan || "Audit initial / Formule sur mesure",
+      "Message et besoins": formData.message || "Aucune précision complémentaire",
+    };
+
+    try {
+      await fetch('https://formsubmit.co/ajax/contact@ambliaweb.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.warn("Transmission lead FormSubmit :", err);
+    } finally {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 900);
+    }
   };
 
   return (
@@ -87,14 +125,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ initialPlan, initialAn
               </div>
 
               <div className="space-y-2">
-                <span className="text-xs font-mono bg-stone-100 text-stone-600 px-3 py-1 rounded-md">
-                  Dossier N° {referenceId}
-                </span>
                 <h3 className="font-serif text-3xl font-bold text-stone-900">
                   Demande d'audit bien reçue !
                 </h3>
                 <p className="text-sm text-stone-600 leading-relaxed">
-                  Merci <strong>{formData.fullName}</strong>. Notre équipe va examiner la conformité, 
+                  Merci <strong>{formData.fullName}</strong>. Votre demande a été transmise directement à notre équipe (<span className="text-stone-900 font-medium">contact@ambliaweb.com</span>). Nous allons examiner la conformité, 
                   les contrastes et l'ergonomie mobile de <strong>{formData.websiteUrl || formData.businessName}</strong>.
                 </p>
               </div>
